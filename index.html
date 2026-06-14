@@ -154,7 +154,7 @@ h1{
 <script>
 (function(){
 
-  var STORIES_KEY = "sudoku_literario_relatos_v1";
+  var STORIES_KEY = "coleccion_relatos_leidos_v1";
   var GUESS_KEY = "sudoku_literario_eleccion_ia_v1";
   var EXTRA_STORY_KEY = "sudoku_literario_relato_extra_v1";
   var SECRET_READ_KEY = "sudoku_literario_el_secreto_leido_v1";
@@ -291,12 +291,14 @@ function renderAIGame(allDiscovered){
               story.title +
               '</a></div>';
     }else{
-      html += '<div class="story-item locked">🔒 Relato por descubrir</div>';
+      html += '<div class="story-item"><a href="' + story.file + '">' +
+              story.title +
+              '</a></div>';
     }
   }
 
   document.getElementById("counter").textContent =
-    "Has descubierto " + discovered + " de " + totalVisible + " relatos.";
+    "Has leído " + discovered + " de " + totalVisible + " relatos.";
 
   document.getElementById("storyList").innerHTML = html;
 
