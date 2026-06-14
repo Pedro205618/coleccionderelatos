@@ -124,7 +124,19 @@ if(secretRead){
     '<span></span>';
 }
 
-</script>  
+</script>
 
+  <script>
+var readStories =
+  JSON.parse(localStorage.getItem("coleccion_relatos_leidos_v1") || "{}");
+
+readStories["easy_1"] = true;
+
+localStorage.setItem(
+  "coleccion_relatos_leidos_v1",
+  JSON.stringify(readStories)
+);
+</script>
+  
 </body>
 </html>
