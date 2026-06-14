@@ -1,0 +1,130 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>El crucero</title>
+
+<style>
+body{
+  margin:0;
+  padding:20px;
+  background:#f4efe6;
+  font-family:Georgia,"Times New Roman",serif;
+  color:#3e2d1f;
+}
+
+.container{
+  max-width:780px;
+  margin:0 auto;
+  padding:22px;
+  border:2px solid #9b7a4f;
+  border-radius:18px;
+  background:linear-gradient(180deg,#f8f1df 0%,#ead8b7 100%);
+  box-shadow:0 10px 28px rgba(60,40,20,.18);
+}
+
+h1{
+  text-align:center;
+  color:#6f4f2c;
+  margin-top:0;
+}
+
+.story{
+  line-height:1.65;
+  font-size:1.05rem;
+}
+
+.story p{
+  margin:0 0 14px;
+}
+
+.story p:first-of-type::first-letter{
+  float:left;
+  font-size:3.6em;
+  line-height:.85;
+  padding-right:6px;
+  padding-top:4px;
+  color:#6f4f2c;
+}
+
+.hero{
+  text-align:center;
+  margin-top:24px;
+}
+
+.hero img{
+  max-width:320px;
+  width:100%;
+  border-radius:12px;
+  box-shadow:0 8px 18px rgba(0,0,0,.18);
+}
+
+.nav{
+  margin-top:26px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
+
+.nav a{
+  color:#6f4f2c;
+  text-decoration:none;
+  font-style:italic;
+}
+
+.nav a:hover{
+  text-decoration:underline;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>El crucero</h1>
+
+  <div class="story">
+    <p>Era un día soleado de finales de marzo. No hacía mucho calor, más bien algo de fresco, pero con una chaquetilla se podía estar bien en la terraza de la cafetería.</p>
+    <p>Las cuatro llegaron puntuales. Tres de ellas habían enviudado en los últimos años. La cuarta nunca se casó. Todas estaban jubiladas y vivían con cierta holgura de sus respectivas pensiones. En realidad eran cinco, pero una de ellas no había podido acercarse ese día.</p>
+    <p>Tenían la idea de hacer un crucero por el Nilo desde Egipto, así que hablaron de ello: del trámite de los pasaportes, del dinero que les costaría, de las mejores fechas para hacerlo. “Me imagino que Rosa no podrá venir”, comentó una de ellas. “Claro, todavía le vive”, apuntó otra. Rieron por la ocurrencia y charlaron animadamente durante un rato. Terminaron sus cafés, y quedaron en verse en un par de días para concretar.</p>
+    <p>Cuando ya se marchaban, les llegó un mensaje a la vez en sus móviles. Era de Rosa, que les decía que había sucedido algo inesperado y terrible. Al día siguiente, las cuatro le acompañaron en el entierro de su marido.</p>
+  </div>
+
+  <div class="hero">
+    <img src="el_crucero.jpg" alt="El crucero">
+  </div>
+
+  <div id="storyNav" class="nav"></div>
+
+</div>
+
+<script>
+
+var secretRead =
+  localStorage.getItem("sudoku_literario_el_secreto_leido_v1") === "true";
+
+var nav = document.getElementById("storyNav");
+
+if(secretRead){
+
+  nav.innerHTML =
+    '<a href="el-hermano.html">← Anterior</a>' +
+    '<a href="coleccion-relatos.html">Colección</a>' +
+    '<a href="el-profesor.html">Siguiente →</a>';
+
+}else{
+
+  nav.innerHTML =
+    '<span></span>' +
+    '<a href="coleccion-relatos.html">Colección</a>' +
+    '<span></span>';
+}
+
+</script>
+  
+</body>
+</html>

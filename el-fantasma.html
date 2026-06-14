@@ -1,0 +1,132 @@
+<!DOCTYPE html>
+<html lang="es">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+<title>El fantasma</title>
+
+<style>
+body{
+  margin:0;
+  padding:20px;
+  background:#f4efe6;
+  font-family:Georgia,"Times New Roman",serif;
+  color:#3e2d1f;
+}
+
+.container{
+  max-width:780px;
+  margin:0 auto;
+  padding:22px;
+  border:2px solid #9b7a4f;
+  border-radius:18px;
+  background:linear-gradient(180deg,#f8f1df 0%,#ead8b7 100%);
+  box-shadow:0 10px 28px rgba(60,40,20,.18);
+}
+
+h1{
+  text-align:center;
+  color:#6f4f2c;
+  margin-top:0;
+}
+
+.story{
+  line-height:1.65;
+  font-size:1.05rem;
+}
+
+.story p{
+  margin:0 0 14px;
+}
+
+.story p:first-of-type::first-letter{
+  float:left;
+  font-size:3.2em;
+  line-height:.85;
+  padding-right:6px;
+  padding-top:4px;
+  color:#6f4f2c;
+}
+
+.hero{
+  text-align:center;
+  margin-top:24px;
+}
+
+.hero img{
+  max-width:320px;
+  width:100%;
+  border-radius:12px;
+  box-shadow:0 8px 18px rgba(0,0,0,.18);
+}
+
+.nav{
+  margin-top:26px;
+  display:flex;
+  justify-content:space-between;
+  align-items:center;
+  gap:10px;
+}
+
+.nav a{
+  color:#6f4f2c;
+  text-decoration:none;
+  font-style:italic;
+}
+
+.nav a:hover{
+  text-decoration:underline;
+}
+</style>
+</head>
+
+<body>
+
+<div class="container">
+
+  <h1>El fantasma</h1>
+
+  <div class="story">
+    <p>Estaba medio tumbado en una de esas butacas reclinables tan cómodas.</p>
+    <p>Se dispuso a meditar, como llevaba haciendo toda la vida. Había que dejar a los pensamientos fluir, observar cómo se sucedían uno tras otro en la mente, sin oposición ni crítica alguna.</p>
+    <p>Ese día sólo pensaba en números, aparecían y desaparecían, se juntaban para luego volverse a separar. El uno se aproximaba al ocho, el nueve al siete, el tres al cinco. Así se pasó un buen rato.</p>
+    <p>Había sido Ingeniero de Caminos, Canales y Puertos, y estaba familiarizado con los números, tanto que solía soñar a menudo con complicados cálculos para resolver toda clase de problemas.</p>
+    <p>Entonces, el uno se aproximó al ocho de nuevo, que se juntó con el siete y este con el tres. ¡Anda, el año de mi nacimiento! Mil ochocientos setenta y tres.</p>
+    <p>¡Qué barbaridad!, pensó. Habían pasado ya 153 años.</p>
+  </div>
+
+  <div class="hero">
+    <img src="el_fantasma.jpg" alt="El fantasma">
+  </div>
+
+  <div id="storyNav" class="nav"></div>
+
+</div>
+
+<script>
+
+var secretRead =
+  localStorage.getItem("sudoku_literario_el_secreto_leido_v1") === "true";
+
+var nav = document.getElementById("storyNav");
+
+if(secretRead){
+
+  nav.innerHTML =
+    '<a href="la-llave.html">← Anterior</a>' +
+    '<a href="coleccion-relatos.html">Colección</a>' +
+    '<a href="el-hermano.html">Siguiente →</a>';
+
+}else{
+
+  nav.innerHTML =
+    '<span></span>' +
+    '<a href="coleccion-relatos.html">Colección</a>' +
+    '<span></span>';
+}
+
+</script>
+  
+</body>
+</html>
